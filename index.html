@@ -1,5 +1,287 @@
+
 <!doctype html>
-<html>
-  <head><meta charset="utf-8"><title>Hello</title></head>
-  <body><h1>It works!</h1></body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matthew Hardenburgh — Portfolio</title>
+  <meta name="description" content="Portfolio for Matthew Hardenburgh: Computer Engineer with experience in RISC V assembly, computer architecture, Verilog, C/C++, hardware validation, software validation, Linux, and hardware-software integration.">
+  <meta property="og:title" content="Matthew Hardenburgh — Portfolio">
+  <meta property="og:description" content="Computer Engineer with experience in RISC V assembly, computer architecture, System Verilog, C/C++, hardware validation, software validation, Linux, and hardware-software integration.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://matthew.hardenburgh.io">
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --card: #11141a;
+      --ink: #e6e9ef;
+      --muted: #a8b0bc;
+      --link: #7ab7ff;
+      --accent: #8fceff;
+      --rule: #1f2530;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f9fc;
+        --card: #ffffff;
+        --ink: #0c1220;
+        --muted: #4b5563;
+        --link: #0b6bcb;
+        --accent: #0a84ff;
+        --rule: #e5e7eb;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px 96px;
+    }
+    header {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.1;
+      margin: 0 0 2px 0;
+      letter-spacing: 0.2px;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .chip { display: inline-flex; align-items: center; gap: 8px; }
+    .chip svg { width: 16px; height: 16px; opacity: 0.75; }
+    .grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 18px 28px;
+      align-items: start;
+      padding-top: 8px;
+    }
+    @media (max-width: 740px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 26px 0 10px;
+    }
+    section { padding: 14px 18px; background: var(--card); border: 1px solid var(--rule); border-radius: 14px; }
+    .bullets { margin: 8px 0 0 0; padding-left: 18px; }
+    .bullets li { margin: 6px 0; }
+    .role {
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      margin-bottom: 6px; font-weight: 600;
+    }
+    .where { color: var(--ink); }
+    .when { color: var(--muted); font-weight: 500; }
+    hr.sep { border: 0; height: 1px; background: var(--rule); margin: 20px 0; }
+    .tagline { color: var(--muted); margin-top: 2px; }
+    footer { margin-top: 28px; color: var(--muted); font-size: 13px; }
+    /* Print styles */
+    @media print {
+      body { background: white; color: black; }
+      .wrap { max-width: none; padding: 0; }
+      section { background: white; border: 0; padding: 0; }
+      a { color: black; text-decoration: none; }
+      header, .grid, .sep, footer { break-inside: avoid; }
+    }
+    .headshot {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--rule);
+    margin-bottom: 14px;
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="headshot.jpg" alt="Portrait of Matthew Hardenburgh" class="headshot">
+      <h1>Matthew Hardenburgh</h1>
+      <div class="contact">
+        <span class="chip">📧 <a href="mailto:matthew@hardenburgh.io">matthew@hardenburgh.io</a></span>
+        <span class="chip">💼 <a href="https://github.com/mdhardenburgh">github.com/mdhardenburgh</a></span>
+        <span class="chip">📱 <a href="tel:+19167519262">(916) 751-9262</a></span>
+        <span class="chip">🌐 <a href="https://matthew.hardenburgh.io">matthew.hardenburgh.io</a></span>
+      </div>
+      <p class="tagline">Computer Engineer focused on RISC V assembly, computer architecture, and automated validation frameworks</p>
+    </header>
+
+    <div class="grid">
+      <div><h2>Education</h2></div>
+      <section>
+        <div class="role">
+          <div class="where">California State University, Chico</div>
+          <div class="when">August 2015 - June 2019</div>
+        </div>
+        <ul class="bullets">
+          <li>Bachelors of Science in Computer Engineering</li>
+          <li>Bachelors of Science in Electrical Engineering</li>
+        </ul>
+        <div class="role">
+          <div class="where">Portland State University</div>
+          <div class="when">January 2024 - December 2026</div>
+        </div>
+        <ul class="bullets">
+          <li>Masters of Science in Electrical and Computer Engineering</li>
+            <ul>
+              <li>Focus of study in computer architecture</li>
+            </ul>
+        </ul>
+      </section>
+
+      <div><h2>Summary</h2></div>
+      <section>
+        <ul class="bullets">
+          <li>5 years’ industry experience with C++, object‑oriented programming, data structures and algorithms.</li>
+          <li>5 years’ industry experience designing, deploying and debugging software in Linux and Windows environments.</li>
+          <li>5 years’ industry experience implementing unit tests with GoogleTest (GTest).</li>
+          <li>5 years’ industry experience implementing functional and behavioral tests in Gherkin and Python to validate software.</li>
+          <li>5 years’ industry experience using Git within Agile development teams.</li>
+          <li>Actively developing SVtest - a unit test like framework for system verilog</li>
+          <li>Actively developing a RISC V processor</li>
+        </ul>
+      </section>
+
+      <div><h2>Industry Experience</h2></div>
+      <section>
+        <div class="role">
+          <div class="where">Software Design Engineer, Tektronix — Beaverton, OR</div>
+          <div class="when">July 2020 – Oct 2025</div>
+        </div>
+        <ul class="bullets">
+          <li>Employed agile methodologies in a collaborative team environment to prioritize and execute features for internal and external customers.</li>
+          <li>Investigated, triaged, and sized software defects to drive informed management decisions.</li>
+          <li>Designed the battery software API for the MSO 2 series oscilloscope using C++ and Qt.</li>
+          <li>Implemented battery temperature diagnostics and logging for the MSO 2 oscilloscope.</li>
+          <li>Developed and executed a test plan for the MSO 2 oscilloscope battery software submodule using Python, C++, and Gherkin.</li>
+          <li>Implemented a phosphor‑like display feature for the MSO 2 oscilloscope with C++ and Qt.</li>
+          <li>Reduced boot time for the MSO 2 oscilloscope from 5 minutes to 1 minute.</li>
+          <li>Designed hardware/software API interfaces with FPGA and ASIC teams for 7 series DPO oscilloscope.</li>
+          <li>Collaborated with hardware and FPGA teams to implement cost‑aware solutions for 7 series DPO oscilloscope.</li>
+          <li>Deployed updates and bug fixes to probe interface software for improved user experience.</li>
+          <li>Refactored diagnostic software APIs to reduce memory leaks and improve developer experience.</li>
+          <li>Delivered improvements to the Python functional test framework.</li>
+          <li>Presented software architecture status and improvement proposals to peers and managers.</li>
+        </ul>
+        <hr class="sep">
+        <div class="role">
+          <div class="where">Engineering Intern, Advanced Bionics — Santa Clarita, CA</div>
+          <div class="when">June 2018 - Aug 2018</div>
+        </div>
+        <ul class="bullets">
+          <li>Designed and implemented unit tests using embedded C and C#.</li>
+          <li>Applied experience in C# OOP, MVC and software design patterns to improve upon internal software development tool that presents information from the sound processor to engineers</li>
+          <li>Applied electrical engineering knowledge and experience to develop and “manufacture” an internal development tool so that the firmware engineers can verify audio output from the sound processor.</li>
+          <li>Gained and applied knowldege in software product development using Agile methodologies.</li>
+        </ul>
+        <hr class="sep">
+        <div class="role">
+          <div class="where">Engineering Intern, AJA Video Systems — Grass Valley, CA</div>
+          <div class="when">June 2016 - Aug 2016</div>
+        </div>
+        <ul class="bullets">
+          <li>Tested products under development and presented data in a report to the product manager.</li>
+          <li>Collaborated with other interns to develop in C++ and C and then deploy a customer requested feature for one of AJA’s products.</li>
+          <li>Performed qualification testing for components under consideration for use in AJA products.</li>
+          <li>Verified electronics schematics of AJA products under development.</li>
+        </ul>
+      </section>
+      
+      <!--
+      <div><h2>Volunteer Experience</h2></div>
+      <section>
+        <div class="role">
+          <div class="where">CSU, Chico Industry Advisory Board (IAB)</div>
+          <div class="when">July 2019 – Present</div>
+        </div>
+        <ul class="bullets">
+          <li></li>
+        </ul>
+      </section>
+      -->
+
+      <div><h2>Projects</h2></div>
+      <section>
+        <div class="role">
+          <div class="where">Neural Network</div>
+          <div class="when">March 2024</div>
+        </div>
+        <ul class="bullets">
+          <li>Implemented a perceptron‑style 4‑layer neural network in C++ to classify the MNIST database.</li>
+          <li>Built a C++ class to load and parse binary image data.</li>
+          <li>Designed a C++ linear‑algebra module to add, transpose, and multiply matrices.</li>
+          <li>Achieved ~85% accuracy on training data; training completed in ~1 hour.</li>
+        </ul>
+        <hr class="sep">
+        <div class="role">
+          <div class="where">RISC‑V Processor</div>
+          <div class="when">March 2024 – Present</div>
+        </div>
+        <ul class="bullets">
+          <li>Designed and implemented a simulator for the RV32I ISA in C++.</li>
+          <li>Developed and executed a C++/GTest test plan for the simulator.</li>
+          <li>Built a SystemVerilog test framework to orchestrate tests and track failures.</li>
+        </ul>
+      </section>
+
+      <div><h2>Masters Courses Competed</h2></div>
+      <section>
+        <div class="role">
+          <div class="where">Computer Architecture</div>
+          <div class="when">Winter 2025</div>
+        </div>
+        <hr class="sep">
+        <div class="role">
+          <div class="where">Microprocessor System Design</div>
+          <div class="when">Fall 2024</div>
+        </div>
+        <hr class="sep">
+        <div class="role">
+          <div class="where">Math Foundations of Machine Learning</div>
+          <div class="when">Winter 2024</div>
+        </div>
+      </section>
+      
+    </div>
+
+    <footer>
+      <p>© 2025 Matthew Hardenburgh</p>
+    </footer>
+  </div>
+  <script>
+    // Optional: smooth scroll for future sections/anchors
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      e.preventDefault();
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
 </html>
